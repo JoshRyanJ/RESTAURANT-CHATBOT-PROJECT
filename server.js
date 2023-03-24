@@ -155,7 +155,7 @@ io.on("connection", (socket) => {
 
   // Listen for chatMessage
   socket.on("chatMessage", (msg) => {
-    socket.emit("cmessage", msg);
+    socket.emit("chatMessage", msg);
   });
 });
 
