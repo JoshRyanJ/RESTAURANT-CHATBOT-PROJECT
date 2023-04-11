@@ -33,10 +33,10 @@ io.use(
 );
 
 const fastFoods = {
-  2: "Banku",
+  2: "Moimoi",
   3: "Ghana Jollof",
-  4: "Moimoi",
-  5: "Burger",
+  4: "Nigerian Jollof",
+  5: "Chinchin and CocaCola",
 };
 
 // io.use((socket, next) => {
