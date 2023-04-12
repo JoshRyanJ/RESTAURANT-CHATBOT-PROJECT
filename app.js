@@ -10,7 +10,7 @@ const port = process.env.PORT || 5000;
 //creating the server
 const server = http.createServer(app);
 //socket.io server set up
-const io = require("socket.io")(server, { pingTimeout: 60000 });
+const io = new Server(server);
 
 //to serve static files
 app.use(express.static(path.join(__dirname, "public")));
