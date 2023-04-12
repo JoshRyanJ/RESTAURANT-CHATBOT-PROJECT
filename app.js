@@ -4,7 +4,8 @@ const express = require("express");
 const app = express();
 const http = require("http");
 const session = require("express-session");
-const port = 5000;
+require('dotenv').config();
+const port = process.env.PORT || 5000;
 
 //creating the server
 const server = http.createServer(app);
@@ -15,7 +16,7 @@ const io = require("socket.io")(server, { pingTimeout: 60000 });
 app.use(express.static(path.join(__dirname, "public")));
 
 const sessionMiddleware = session({
-  secret: "changeit",
+  secret: process.env.SESSION_KEY,
   resave: false,
   saveUninitialized: false,
 });
